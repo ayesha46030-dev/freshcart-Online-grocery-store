@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 20% 97%;
+    --foreground: 150 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 15% 12%;
+
+    --primary: 152 44% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 100 25% 93%;
+    --secondary-foreground: 150 15% 20%;
+
+    --muted: 90 12% 92%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 25 85% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 90 10% 88%;
+    --input: 90 10% 88%;
+    --ring: 152 44% 28%;
+
+    --radius: 0.75rem;
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
